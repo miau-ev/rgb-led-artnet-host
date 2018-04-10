@@ -10,6 +10,7 @@ sudo apt-get update && \
 echo Done
 
 echo [2/5] Installing Node.JS...
+current=$(pwd)
 mkdir -p /tmp/nodejs
 cd /tmp/nodejs
 wget https://nodejs.org/dist/v8.11.1/node-v8.11.1-linux-armv6l.tar.xz
@@ -19,6 +20,7 @@ sudo cp -r bin /usr/local/
 sudo cp -r include /usr/local/
 sudo cp -r lib /usr/local/
 sudo cp -r share /usr/local/
+cd $current
 echo Done
 
 echo [3/5] Installing gpio-artnet-node...
