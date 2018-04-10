@@ -10,8 +10,15 @@ sudo apt-get update && \
 echo Done
 
 echo [2/5] Installing Node.JS...
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
+mkdir -p /tmp/nodejs
+cd /tmp/nodejs
+wget https://nodejs.org/dist/v8.11.1/node-v8.11.1-linux-armv6l.tar.xz
+tar -xvf node-v8.11.1-linux-armv6l.tar.xz
+cd node-v8.11.1-linux-armv6l
+sudo cp -r bin /usr/local/
+sudo cp -r include /usr/local/
+sudo cp -r lib /usr/local/
+sudo cp -r share /usr/local/
 echo Done
 
 echo [3/5] Installing gpio-artnet-node...
