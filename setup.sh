@@ -5,7 +5,7 @@ echo [1/5] Installing Dependencies...
 sudo apt-get update && \
     sudo apt-get install -y --no-install-recommends \
         git \
-        build-essentials \
+        build-essential \
         pigpio
 echo Done
 
